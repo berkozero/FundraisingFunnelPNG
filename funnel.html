@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: transparent;
+    background: #0f0f0f;
     font-family: 'Inter', sans-serif;
     padding: 60px 80px;
   }
@@ -22,11 +22,11 @@
     gap: 40px;
   }
   .funnel-title {
-    font-size: 42px;
+    font-size: 56px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #1e293b;
+    color: #f1f5f9;
   }
   .funnel-row {
     display: flex;
@@ -35,8 +35,8 @@
   }
   .funnel {
     position: relative;
-    width: 520px;
-    height: 560px;
+    width: 700px;
+    height: 750px;
     flex-shrink: 0;
   }
   .funnel svg {
@@ -58,12 +58,12 @@
     text-align: center;
     pointer-events: none;
   }
-  .label-1 { top: 56px; }
-  .label-2 { top: 245px; }
-  .label-3 { top: 440px; }
+  .label-1 { top: 75px; }
+  .label-2 { top: 325px; }
+  .label-3 { top: 585px; }
   .funnel-label strong {
     display: block;
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 700;
     color: #fff;
     letter-spacing: 0.3px;
@@ -71,35 +71,35 @@
   }
   .funnel-label span {
     display: block;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     text-transform: none;
     letter-spacing: 0.2px;
     color: rgba(255,255,255,0.75);
-    margin-top: 5px;
+    margin-top: 6px;
   }
-  .label-3 strong { color: #7c2d12; }
-  .label-3 span { color: rgba(124,45,18,0.7); }
+  .label-3 strong { color: #fff; }
+  .label-3 span { color: rgba(255,255,255,0.8); }
 
   /* Right-side annotations */
   .annotations {
     display: flex;
     flex-direction: column;
     padding-top: 0;
-    margin-left: -10px;
+    margin-left: -45px;
   }
   .annotation {
     display: flex;
     align-items: center;
     gap: 20px;
   }
-  .anno-1 { height: 187px; }
-  .anno-2 { height: 187px; }
-  .anno-3 { height: 187px; }
+  .anno-1 { height: 250px; }
+  .anno-2 { height: 250px; }
+  .anno-3 { height: 250px; }
   .anno-line {
-    width: 80px;
-    height: 0.5px;
-    background: linear-gradient(to right, #d4d4d4, #e2e8f0);
+    width: 120px;
+    height: 1.5px;
+    background: linear-gradient(to right, #6b7280, #4b5563);
     flex-shrink: 0;
   }
   .anno-text {
@@ -108,15 +108,15 @@
     gap: 2px;
   }
   .anno-text strong {
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 700;
-    color: #1e293b;
+    color: #f1f5f9;
     letter-spacing: 0.1px;
   }
   .anno-text span {
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 400;
-    color: #64748b;
+    color: #94a3b8;
     letter-spacing: 0.1px;
   }
 
@@ -156,11 +156,11 @@
           </div>
           <div class="funnel-label label-2">
             <strong>Investor Calls</strong>
-            <span>Get a soft-yes</span>
+            <span>Pitch & convince</span>
           </div>
           <div class="funnel-label label-3">
             <strong>Close</strong>
-            <span>Receive the money</span>
+            <span>Get the wire</span>
           </div>
         </div>
       </div>
@@ -182,8 +182,8 @@
         <div class="annotation anno-3">
           <div class="anno-line"></div>
           <div class="anno-text">
-            <strong>Execution</strong>
-            <span>YC handshake & docs</span>
+            <strong>Closing Mechanics</strong>
+            <span>YC handshake, SAFEs & docs</span>
           </div>
         </div>
       </div>
