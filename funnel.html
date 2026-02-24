@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundraising Funnel</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    padding: 60px 80px;
+  }
+  .funnel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .funnel-title {
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #1e293b;
+  }
+  .funnel-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .funnel {
+    position: relative;
+    width: 520px;
+    height: 560px;
+    flex-shrink: 0;
+  }
+  .funnel svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .funnel-labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .funnel-label {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+  }
+  .label-1 { top: 56px; }
+  .label-2 { top: 245px; }
+  .label-3 { top: 440px; }
+  .funnel-label strong {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+  .funnel-label span {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0.2px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 5px;
+  }
+  .label-3 strong { color: #7c2d12; }
+  .label-3 span { color: rgba(124,45,18,0.7); }
+
+  /* Right-side annotations */
+  .annotations {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    margin-left: -10px;
+  }
+  .annotation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .anno-1 { height: 187px; }
+  .anno-2 { height: 187px; }
+  .anno-3 { height: 187px; }
+  .anno-line {
+    width: 80px;
+    height: 0.5px;
+    background: linear-gradient(to right, #d4d4d4, #e2e8f0);
+    flex-shrink: 0;
+  }
+  .anno-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .anno-text strong {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 0.1px;
+  }
+  .anno-text span {
+    font-size: 17px;
+    font-weight: 400;
+    color: #64748b;
+    letter-spacing: 0.1px;
+  }
+
+</style>
+</head>
+<body>
+  <div class="funnel-wrapper">
+    <div class="funnel-title">Fundraising Funnel</div>
+    <div class="funnel-row">
+      <div class="funnel">
+        <svg viewBox="0 0 380 420" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#dc5609"/>
+              <stop offset="100%" stop-color="#ea580c"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#f07218"/>
+              <stop offset="100%" stop-color="#f97316"/>
+            </linearGradient>
+            <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#fbad6a"/>
+              <stop offset="100%" stop-color="#fdba74"/>
+            </linearGradient>
+          </defs>
+          <!-- Top layer -->
+          <polygon points="5,0 375,0 325,136 55,136" fill="url(#g1)"/>
+          <!-- Mid layer -->
+          <polygon points="54,142 326,142 278,278 102,278" fill="url(#g2)"/>
+          <!-- Bot layer -->
+          <polygon points="101,284 279,284 240,420 140,420" fill="url(#g3)"/>
+        </svg>
+        <div class="funnel-labels">
+          <div class="funnel-label label-1">
+            <strong>Top of Funnel</strong>
+            <span>Schedule the call</span>
+          </div>
+          <div class="funnel-label label-2">
+            <strong>Investor Calls</strong>
+            <span>Get a soft-yes</span>
+          </div>
+          <div class="funnel-label label-3">
+            <strong>Close</strong>
+            <span>Receive the money</span>
+          </div>
+        </div>
+      </div>
+      <div class="annotations">
+        <div class="annotation anno-1">
+          <div class="anno-line"></div>
+          <div class="anno-text">
+            <strong>Highest Leverage</strong>
+            <span>Warm intros: Blurb quality x Number of connections</span>
+          </div>
+        </div>
+        <div class="annotation anno-2">
+          <div class="anno-line"></div>
+          <div class="anno-text">
+            <strong>Conversion Driver</strong>
+            <span>Pitch deck & delivery</span>
+          </div>
+        </div>
+        <div class="annotation anno-3">
+          <div class="anno-line"></div>
+          <div class="anno-text">
+            <strong>Execution</strong>
+            <span>YC handshake & docs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
